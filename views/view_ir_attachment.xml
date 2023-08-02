@@ -1,0 +1,119 @@
+<openerp>
+    <data noupdate="0">
+
+
+        <record id="view_attachment_smartgrid_form" model="ir.ui.view">
+            <field name="model">ir.attachment</field>
+            <field name="priority">16</field>
+            <field name="inherit_id" eval="False"/>
+            <field name="arch" type="xml">
+                <form string="Attachments">
+                   <sheet>
+                    <label for="name" class="oe_edit_only"/>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <group string="Smartgrid">
+                        <field name="zone_id" domain="[('user_ids','in',uid)]" required="1"/>
+                        <field name="smartgrid_type" required="1"/>
+                    </group>
+                    <group string="Data">
+                        <field name="type"/>
+                        <field name="datas" filename="datas_fname" attrs="{'invisible':[('type','=','url')]}"/>
+                        <field name="datas_fname" invisible="1"/>
+                        <field name="store_fname" invisible="1"/>
+                        <field name="url" widget="url" attrs="{'invisible':[('type','=','binary')]}"/>
+                        <field name="user_id" context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'base.group_document_user']}"/>
+                    </group>
+                    <group>
+                        <group string="Attached To" invisible="1">
+                            <field name="res_model"/>
+                            <field name="res_id"/>
+                            <field name="res_name"/>
+                            <field name="company_id" groups="base.group_multi_company" widget="selection"/>
+                            <field name="parent_id"/>
+                            <field name="partner_id"/>
+                        </group>
+                        <group groups="base.group_no_one" string="History">
+                            <label for="create_uid" string="Creation"/>
+                            <div name="creation_div">
+                                <field name="create_uid" readonly="1" class="oe_inline"/> on
+                                <field name="create_date" readonly="1" class="oe_inline"/>
+                            </div>
+                            <label for="write_uid" string="Modification"/>
+                            <div>
+                                <field name="write_uid" readonly="1" class="oe_inline"/> on
+                                <field name="write_date" readonly="1" class="oe_inline"/>
+                            </div>
+                        </group>
+                        <group name="description_group" string="Description" colspan="4">
+                            <field name="description" nolabel="1"/>
+                        </group>
+                        <group string="Indexed Content" colspan="4">
+                            <field name="index_content" nolabel="1"/>
+                        </group>
+                    </group>
+                  </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- List View -->
+        <record id="view_attachment_smartgrid_tree" model="ir.ui.view">
+            <field name="model">ir.attachment</field>
+            <field name="arch" type="xml">
+                <tree string="Attachments">
+                    <field name="name"/>
+                    <field name="datas_fname"/>
+                    <field name="type"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="zone_id"/>
+                    <field name="smartgrid_type"/>
+                    <!--<field name="datas"/>-->
+                    <button name="get_s3_file" string="Download" icon="STOCK_SAVE_AS" type="object"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record id="view_attachment_smartgrid_search" model="ir.ui.view">
+            <field name="model">ir.attachment</field>
+            <field name="arch" type="xml">
+                <search string="Attachments">
+                    <field name="name" filter_domain="['|', ('name','ilike',self), ('datas_fname','ilike',self)]" string="Attachment"/>
+                    <field name="create_date"/>
+                    <field name="zone_id"/>
+                    <field name="smartgrid_type"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_smartgrid_attachment" model="ir.actions.act_window">
+            <field name="name">SmartGrid Attachments</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ir.attachment</field>
+            <field name="view_type">form</field>
+            <field name="view_id" eval="False"/>
+            <field name="search_view_id" ref="view_attachment_smartgrid_search"/>
+            <field name="context">{'default_res_model': 'sg.zone'}</field>
+            <field name="domain">[('zone_id','!=',False),
+                  ('zone_id.user_ids','in', uid),
+                  ('smartgrid_type','in',['alarms','power_customers','power_prosumer','power_companies', 'forecasts'])]</field>
+        </record>
+        <record model="ir.actions.act_window.view" id="smartgrid_attach_act_tree">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_attachment_smartgrid_tree"/>
+            <field name="act_window_id" ref="action_smartgrid_attachment"/>
+        </record>
+        <record model="ir.actions.act_window.view" id="smartgrid_attach_act_form">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_attachment_smartgrid_form"/>
+            <field name="act_window_id" ref="action_smartgrid_attachment"/>
+        </record>
+
+
+    </data>
+</openerp>

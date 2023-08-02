@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Files linked to smartgrid>
+        <record id="csv_alarms_attach1" model="ir.attachment">
+            <field name="datas">bWlncmF0aW9uIHRlc3Q=</field>
+            <field name="datas_fname">alarmsmartgrid1.csv</field>
+            <field name="name">alarmsmartgrid1.csv</field>
+        </record-->
+        
+        <!-- Cron for SmartGrid Power -->
+        <record id="ir_cron_smartgrid_power_action" model="ir.cron">
+            <field name="name">SmartGrid Power Service</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">hours</field>
+            <field name="numbercall">-1</field>
+            <field name="nextcall" eval="(DateTime.now() + timedelta(hours=1)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="doall" eval="False"/>
+            <field name="model">sg.zone.power</field>
+            <field name="function">_get_power</field>
+            <field name="args">()</field>
+            <field name="active" eval="True"/>
+        </record>
+
+        <!-- Cron for SmartGrid Alarms -->
+        <record id="ir_cron_smartgrid_alarm_action" model="ir.cron">
+            <field name="name">SmartGrid Alarm Service</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">hours</field>
+            <field name="numbercall">-1</field>
+            <field name="nextcall" eval="(DateTime.now() + timedelta(hours=1)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="doall" eval="False"/>
+            <field name="model">sg.zone.alarm</field>
+            <field name="function">_get_alarm</field>
+            <field name="args">()</field>
+            <field name="active" eval="True"/>
+        </record>
+
+        <!-- Cron for SmartGrid Energy -->
+
+        <!--record id="ir_cron_smartgrid_energy_action" model="ir.cron">
+            <field name="name">SmartGrid Energy Service</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">hours</field>
+            <field name="numbercall">-1</field>
+            <field name="nextcall" eval="(DateTime.now() + timedelta(hours=1)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="doall" eval="False"/>
+            <field name="model">sg.zone.energy</field>
+            <field name="function">_get_energy</field>
+            <field name="args">()</field>
+            <field name="active" eval="True"/>
+        </record-->
+        
+        <!-- Api Rest Parameters -->
+    	<record id="smartgrid_api_url_parameter" model="ir.config_parameter">
+            <field name="key">smartgrid.api.url.parameter</field>
+            <field name="value">http://api.techus.it</field>
+        </record>
+    	<record id="smartgrid_client_id_parameter" model="ir.config_parameter">
+            <field name="key">smartgrid.client.id</field>
+            <field name="value">7Qn5LbVqVINkiyH4ckTJaubgw7064swmt7AaVQgM</field>
+        </record>
+    	<record id="smartgrid_client_secret_parameter" model="ir.config_parameter">
+            <field name="key">smartgrid.client.secret</field>
+            <field name="value">TPvezFsO0kN5ULt7b3jBH9rWDIvoznWwHZWs7aUo8SiZ95z9TjyE8V2Zjt83fQWFyDB5az4wT4OLIyyLsTxhfyBdPRRFUfgSMOSQspS1S5M7Fyw5wzEgEmLiow1MpVNh</field>
+        </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,128 @@
+<openerp>
+    <data noupdate="0">
+
+
+        <!-- List View -->
+        <record id="view_sg_smartmeter_tree" model="ir.ui.view">
+            <field name="name">smartgrid.smartmeter.tree</field>
+            <field name="model">sg.smartmeter</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="create_date"/>
+                    <field name="create_uid"/>
+                    <field name="write_uid"/>
+                    <field name="write_date"/>
+
+                    <field name="name"/>
+                    <field name="phases"/>
+                    <field name="type"/>
+                    <field name="zone_ids"/>
+                    <field name="contract_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_form_sg_smartmeter" model="ir.ui.view">
+            <field name="name">smartgrid.smartmeter.form</field>
+            <field name="model">sg.smartmeter</field>
+            <field name="arch" type="xml">
+                <form string="Smartgrid Smartmeter" version="7.0">
+                    <!--<sheet>-->
+                        <group string="Zone List">
+                                <field name="zone_ids"/>
+                        </group>
+
+                        <group string="Smartmeter Technical Informations">
+                            <group>
+                                <field name="name"/>
+                                <field name="contract_id"/>
+                                <field name="model_number"/>
+                                <field name="type"/>
+                                <field name="latitude"/>
+                                <field name="description"/>
+                            </group>
+                            <group>
+                                <field name="heroltd_serial_number"/>
+                                <field name="phases"/>
+                                <field name="longitude"/>
+                                <field name="is_weather_station"/>
+                             </group>
+                        </group>
+
+                        <group string="Smartmeter Offsets">
+
+                            <group string="Active Energy">
+                                <group>
+                                    <field name="offset_active_IMP_r" attrs="{'invisible': [('phases','!=', '3')]}"/>
+                                    <field name="offset_active_IMP_s" attrs="{'invisible': [('phases','!=', '3')]}"/>
+                                    <field name="offset_active_IMP_t" attrs="{'invisible': [('phases','!=', '3')]}"/>
+                                    <field name="offset_active_IMP_sum" attrs="{'invisible': [('phases','!=', '3')]}"/>
+                                    <field name="offset_active_IMP" attrs="{'invisible': [('phases','!=', '1')]}"/>
+                                </group>
+                                <group>
+                                    <field name="offset_active_EXP_r" attrs="{'invisible': [('phases','!=', '3')]}"/>
+                                    <field name="offset_active_EXP_s" attrs="{'invisible': [('phases','!=', '3')]}"/>
+                                    <field name="offset_active_EXP_t" attrs="{'invisible': [('phases','!=', '3')]}"/>
+                                    <field name="offset_active_EXP_sum" attrs="{'invisible': [('phases','!=', '3')]}"/>
+                                    <field name="offset_active_EXP" attrs="{'invisible': [('phases','!=', '1')]}"/>
+                                </group>
+                            </group>
+
+                            <newline/>
+                            <group string="Rective Energy">
+                                <group>
+                                    <field name="offset_reactive_IMP_r" attrs="{'invisible': [('phases','!=', '3')]}"/>
+                                    <field name="offset_reactive_IMP_s" attrs="{'invisible': [('phases','!=', '3')]}"/>
+                                    <field name="offset_reactive_IMP_t" attrs="{'invisible': [('phases','!=', '3')]}"/>
+                                    <field name="offset_reactive_IMP_sum" attrs="{'invisible': [('phases','!=', '3')]}"/>
+                                    <field name="offset_reactive_IMP" attrs="{'invisible': [('phases','!=', '1')]}"/>
+                                </group>
+                                <group>
+                                    <field name="offset_reactive_EXP_r" attrs="{'invisible': [('phases','!=', '3')]}"/>
+                                    <field name="offset_reactive_EXP_s" attrs="{'invisible': [('phases','!=', '3')]}"/>
+                                    <field name="offset_reactive_EXP_t" attrs="{'invisible': [('phases','!=', '3')]}"/>
+                                    <field name="offset_reactive_EXP_sum" attrs="{'invisible': [('phases','!=', '3')]}"/>
+                                    <field name="offset_reactive_EXP" attrs="{'invisible': [('phases','!=', '1')]}"/>
+                                </group>
+                            </group>
+
+
+                        </group>
+                    <!--</sheet>-->
+                </form>
+            </field>
+        </record>
+
+        <record id="view_sg_smartmeter_filter" model="ir.ui.view">
+            <field name="name">smartgrid.smartmeter.filter</field>
+            <field name="model">sg.smartmeter</field>
+            <field name="arch" type="xml">
+                <search string="Search smartmeter">
+                    <field name="name" />
+                    <field name="model_number" />
+                    <field name="heroltd_serial_number" />
+                    <field name="type"/>
+                    <field name="is_weather_station"/>
+                    <field name="latitude"/>
+                    <field name="longitude"/>
+                    <field name="contract_id"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_smartgrid_smartmeter_view" model="ir.actions.act_window">
+            <field name="name">Smartmeters</field>
+            <field name="res_model">sg.smartmeter</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_sg_smartmeter_filter"/>
+            <field name="help">The Smartgrid smartmeters</field>
+        </record>
+
+
+
+
+    </data>
+</openerp>

@@ -1,0 +1,80 @@
+<openerp>
+    <data noupdate="0">
+<!-- Smartgrid Messages -->
+        <!-- List View -->
+        <record id="view_sg_message_tree" model="ir.ui.view">
+            <field name="name">smartgrid.message.tree</field>
+            <field name="model">sg.message</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="zone_id"/>
+                    <field name="name"/>
+                    <field name="creation_date" />
+                    <field name="to_all" groups="smartgrid.group_manager_smartgrid"/>
+                    <field name="partner_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_sg_message_form" model="ir.ui.view">
+            <field name="name">smartgrid.message.form</field>
+            <field name="model">sg.message</field>
+            <field name="arch" type="xml">
+                <form string="Smartgrid Message" version="7.0">
+                    <sheet>
+                        <group>
+                            <field name="zone_id" domain="[('user_ids','in',uid)]"/>
+                            <field name="name" />
+                            <field name="creation_date" />
+                            <field name="message" />
+                            <field name="to_all" groups="smartgrid.group_manager_smartgrid" on_change="onchange_to_all(to_all, context)" />
+                            <field name="partner_id" attrs="{'invisible': [('to_all','=',True)],'required':[('to_all','=',False)]}"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_sg_message_filter" model="ir.ui.view">
+            <field name="name">smartgrid.message.filter</field>
+            <field name="model">sg.message</field>
+            <field name="arch" type="xml">
+                <search string="Search Smartgrid Message">
+                    <field name="zone_id"/>
+                    <field name="name"/>
+                    <field name="creation_date" />
+                    <field name="to_all" />
+                    <field name="partner_id"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_smartgrid_messages_all" model="ir.actions.act_window">
+            <field name="name">All Smartgrid Messages</field>
+            <field name="res_model">sg.message</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_sg_message_filter"/>
+            <field name="domain">[('to_all','!=',False),('zone_id.user_ids','in',uid)]</field>
+            <field name="context">{'default_to_all': True}</field>
+            <field name="help">The Smartgrid Messages</field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_smartgrid_messages_partner" model="ir.actions.act_window">
+            <field name="name">Customer Smartgrid Messages</field>
+            <field name="res_model">sg.message</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_sg_message_filter"/>
+            <field name="domain">[('to_all','!=',True),('zone_id.user_ids','in',uid)]</field>
+            <field name="context">{'default_to_all': False}</field>
+            <field name="help">The Smartgrid Messages to a Customer</field>
+        </record>
+
+
+
+    </data>
+</openerp>

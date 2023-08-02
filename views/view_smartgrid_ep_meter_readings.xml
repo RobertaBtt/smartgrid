@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record id="view_sg_meter_readings_tree" model="ir.ui.view">
+            <field name="name">sg.meter.readings.tree</field>
+            <field name="model">sg.meter_readings</field>
+            <field name="arch" type="xml">
+                <tree string="Letture Smartmeter">
+                    <field name="create_date"/>
+                    <field name="create_uid"/>
+                    <field name="write_uid"/>
+                    <field name="write_date"/>
+                    <field name="measurement_ts" />
+                    <field name="sender_id" />
+                    <field name="contract_id" />
+                    <field name="partner_id" />
+                    <field name="energia_attiva_prelievo" />
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_sg_meter_readings_form" model="ir.ui.view">
+            <field name="name">sg.meter.readings.form</field>
+            <field name="model">sg.meter_readings</field>
+            <field name="arch" type="xml">
+                 <form string="Smartgrid Message" version="7.0">
+                    <sheet>
+              <group>
+                  <field name="measurement_ts" />
+                    <field name="sender_id" attrs="{'readonly': True }"/>
+                    <field name="energia_attiva_prelievo" attrs="{'readonly': True }"/>
+                    <field name="contract_id" attrs="{'readonly': True }"/>
+                    <field name="partner_id" attrs="{'readonly': True }"/>
+                    <field name="create_uid" attrs="{'readonly': True }"/>
+                    <field name="create_date" attrs="{'readonly': True }"/>
+              </group>
+                </sheet>
+                </form>
+
+            </field>
+        </record>
+
+
+        <record id="action_sg_meter_readings" model="ir.actions.act_window">
+            <field name="name">Letture Smartmeter</field>
+            <field name="res_model">sg.meter_readings</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id"  eval="False"/>
+            <field name="context">{}</field>
+            <field name="help">Letture Smartmeter</field>
+        </record>
+
+
+
+    </data>
+</openerp>

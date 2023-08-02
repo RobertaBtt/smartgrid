@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <!-- Smartgrid Alarm Model -->
+
+        <!--&lt;!&ndash; Kanban Gauge View &ndash;&gt;-->
+        <!--<record model="ir.ui.view" id="view_sg_zone_alarm_kanban">-->
+        <!--<field name="name">smartgrid.zone.alarm.kanban</field>-->
+        <!--<field name="model">sg.zone.alarm</field>-->
+        <!--<field name="arch" type="xml">-->
+        <!--<kanban  class="oe_background_grey" create="0">-->
+        <!--<field name='color'/>-->
+        <!--<field name='zone_id'/>-->
+        <!--<field name='request_timestamp'/>-->
+        <!--<field name='alarm_ids'/>-->
+        <!--<templates>-->
+        <!--<t t-name="kanban-box">-->
+        <!--<div t-attf-class="oe_kanban_color_#{kanban_getcolor(record.color.raw_value)} oe_kanban_card oe_kanban_global_click">-->
+        <!--<div class="oe_kanban_content">-->
+        <!--<div>-->
+        <!--<h2>Zone ID: <field name="zone_id" /></h2>-->
+        <!--<h3>Lista Allarmi: <field name="alarm_ids" /></h3>-->
+        <!--&lt;!&ndash;<h3>Total Number of Contracts: <field name="contract_number" /></h3>&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div>-->
+        <!--<div style="display: inline-block">-->
+        <!--&lt;!&ndash;<field name="active_power_in" widget="gauge" style="width:120px; height: 90px;"/>&ndash;&gt;-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--&lt;!&ndash;<div><button name="new_message" string="New Message" icon="terp-mail-message-new" type="object" groups="smartgrid.group_manager_smartgrid"/></div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="oe_clear"></div>&ndash;&gt;-->
+        <!--</div>-->
+        <!--</t>-->
+        <!--</templates>-->
+        <!--</kanban>-->
+        <!--</field>-->
+        <!--</record>-->
+
+        <!-- List View -->
+        <record id="view_sg_zone_alarm_tree" model="ir.ui.view">
+            <field name="name">smartgrid.zone.alarm.tree</field>
+            <field name="model">sg.zone.alarm</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name='request_timestamp'/>
+                    <field name='smartmeter_sn'/>
+                    <field name='client_name'/>
+                    <field name='pod_code'/>
+                    <field name='type'/>
+
+                    <field name='zone_id'/>
+                    <field name='not_offline_smartmeter' widget="many2onebutton"/>
+                    <field name='not_power_treshold_exceeded' widget="many2onebutton"/>
+                    <field name='not_tampering' widget="many2onebutton"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_sg_zone_alarm_form" model="ir.ui.view">
+            <field name="name">smartgrid.zone.alarm.form</field>
+            <field name="model">sg.zone.alarm</field>
+            <field name="arch" type="xml">
+                <form string="Smartgrid Zone Alarms" version="7.0">
+                    <sheet>
+                        <group>
+                             <field name='request_timestamp' attrs= "{'readonly': True}"/>
+                            <field name='smartmeter_sn' attrs= "{'readonly': True}"/>
+                            <field name='client_name' attrs= "{'readonly': True}"/>
+                            <field name='pod_code' attrs= "{'readonly': True}"/>
+                            <field name='type' attrs= "{'readonly': True}"/>
+                            <field name='zone_id' attrs= "{'readonly': True}"/>
+                            <field name='offline_smartmeter' attrs= "{'readonly': True}"/>
+                            <field name='power_treshold_exceeded' attrs= "{'readonly': True}"/>
+                            <field name='tampering' attrs= "{'readonly': True}"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_sg_zone_alarm_filter" model="ir.ui.view">
+            <field name="name">smartgrid.zone.alarm.filter</field>
+            <field name="model">sg.zone.alarm</field>
+            <field name="arch" type="xml">
+                <search string="Search Smartgrid Alarms">
+                    <field name='request_timestamp'/>
+
+                    <field name='smartmeter_id'/>
+                    <field name='zone_id'/>
+                    <!--<field name='not_offline_smartmeter'/>-->
+                    <!--<field name='not_power_treshold_exceeded'/>-->
+                    <!--<field name='not_tampering'/>-->
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_smartgrid_zone_alarm" model="ir.actions.act_window">
+            <field name="name">Smartgrid Zone Alarm</field>
+            <field name="res_model">sg.zone.alarm</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_sg_zone_alarm_filter"/>
+            <field name="domain">[]</field>
+            <field name="help">The Smartgrid Alarms</field>
+        </record>
+
+
+
+
+    </data>
+</openerp>
+

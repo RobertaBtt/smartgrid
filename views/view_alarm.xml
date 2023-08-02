@@ -1,0 +1,130 @@
+<openerp>
+    <data noupdate="0">
+
+        <!-- Smartgrid Alarms -->
+        <!-- Kanban Gauge View -->
+        <!--<record model="ir.ui.view" id="view_sg_alarm_kanban">-->
+            <!--<field name="name">smartgrid.alarm.kanban</field>-->
+            <!--<field name="model">sg.alarm</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<kanban  class="oe_background_grey" create="0">-->
+                    <!--<field name='color'/>-->
+                    <!--<field name='name'/>-->
+                    <!--&lt;!&ndash;<field name='zone_id'/>&ndash;&gt;-->
+                    <!--<field name="smartmeter_ids"/>-->
+                    <!--<field name="offline_smartmeter" />-->
+                    <!--<field name="power_treshold_exceeded" />-->
+                    <!--<field name="tampering" />-->
+                    <!--<templates>-->
+                        <!--<t t-name="kanban-box">-->
+                            <!--<div t-attf-class="oe_kanban_color_#{kanban_getcolor(record.color.raw_value)} oe_kanban_card oe_kanban_global_click">-->
+                                <!--<div class="oe_kanban_content">-->
+                                    <!--<div>-->
+                                        <!--&lt;!&ndash;<h2>Zone ID: <field name="zone_id" /></h2>&ndash;&gt;-->
+                                        <!--<h3> <field name="name" /></h3>-->
+                                        <!--&lt;!&ndash;<h3>Total of Online Meters: <field name="online_meter_number" /></h3>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<h3>Total of Offline Meters: <field name="offline_meter_number" /></h3>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<h3>Total Number of Contracts: <field name="contract_number" /></h3>&ndash;&gt;-->
+                                        <!--<h4 style="display: inline;">Total Net Value at</h4>-->
+                                        <!--<h3><field name="name"/></h3>-->
+                                    <!--</div>-->
+                                    <!--<div>-->
+                                        <!--<div style="display: inline-block">-->
+                                            <!--<field name="smartmeter_ids" widget="many2many" style="width:120px; height: 90px;"/>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+<!--&lt;!&ndash;-->
+                                <!--<div><button name="new_message" string="New Message" icon="terp-mail-message-new" type="object" groups="smartgrid.group_manager_smartgrid"/></div>-->
+                                <!--<div class="oe_clear"></div>-->
+<!--&ndash;&gt;-->
+                            <!--</div>-->
+                        <!--</t>-->
+                    <!--</templates>-->
+                <!--</kanban>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <!-- List View -->
+        <!--<record id="view_sg_alarm_tree" model="ir.ui.view">-->
+            <!--<field name="name">smartgrid.alarm.tree</field>-->
+            <!--<field name="model">sg.alarm</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<tree>-->
+                    <!--<field name="smartmeter_ids"/>-->
+                    <!--<field name="name"/>-->
+                    <!--<field name="offline_smartmeter" />-->
+                    <!--<field name="power_treshold_exceeded" />-->
+                    <!--<field name="tampering" />-->
+                <!--</tree>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <!-- Form View -->
+        <!--<record id="view_sg_alarm_form" model="ir.ui.view">-->
+            <!--<field name="name">smartgrid.alarm.form</field>-->
+            <!--<field name="model">sg.alarm</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<form string="Smartgrid Alarms" version="7.0">-->
+                    <!--<sheet>-->
+                        <!--<group>-->
+                            <!--<field name="smartmeter_ids"/>-->
+                            <!--<field name="name"/>-->
+                            <!--<field name="offline_smartmeter" />-->
+                            <!--<field name="power_treshold_exceeded" />-->
+                            <!--<field name="tampering" />-->
+                        <!--</group>-->
+                    <!--</sheet>-->
+                <!--</form>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <!-- Search View -->
+        <!--<record id="view_sg_alarm_filter" model="ir.ui.view">-->
+            <!--<field name="name">smartgrid.alarm.filter</field>-->
+            <!--<field name="model">sg.alarm</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<search string="Search Smartgrid Alarm">-->
+                    <!--<field name="smartmeter_ids"/>-->
+                    <!--<field name="name"/>-->
+                    <!--<field name="offline_smartmeter" />-->
+                    <!--<field name="power_treshold_exceeded" />-->
+                    <!--<field name="tampering" />-->
+                <!--</search>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <!-- Action -->
+        <!--<record id="action_smartgrid_alarms_summary" model="ir.actions.act_window">-->
+            <!--<field name="name">Smartgrid Zone Alarms</field>-->
+            <!--<field name="res_model">sg.alarm</field>-->
+            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_mode">tree,form</field>-->
+            <!--<field name="search_view_id" ref="view_sg_alarm_filter"/>-->
+            <!--<field name="help">The Smartgrid Alarms</field>-->
+        <!--</record>-->
+
+        <!--<record id="action_smartgrid_alarms_detail" model="ir.actions.act_window">-->
+            <!--<field name="name">Smartgrid Alarms Detail</field>-->
+            <!--<field name="res_model">sg.alarm</field>-->
+            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_mode">tree,form</field>-->
+            <!--<field name="search_view_id" ref="view_sg_alarm_filter"/>-->
+            <!--<field name="help">The Smartgrid Alarms details</field>-->
+        <!--</record>-->
+
+        <!--<menuitem id="menu_smart_grid_manager_alarms" parent="menu_smart_grid_manager_root" name="Smartgrid Alarms" sequence="60" />-->
+
+
+
+            <!--<menuitem id="menu_smart_grid_alarms_detail"-->
+                      <!--parent="menu_smart_grid_manager_alarms"-->
+                      <!--action="action_smartgrid_alarms_detail"-->
+                      <!--string="Smartgrid Alarms Detail"-->
+                      <!--sequence="20" />-->
+
+
+
+
+    </data>
+</openerp>

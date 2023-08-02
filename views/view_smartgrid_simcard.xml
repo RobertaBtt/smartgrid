@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <!-- Simcard List/Tree-->
+        <record id="view_sg_simcard_tree" model="ir.ui.view">
+            <field name="name">sg.simcard.tree</field>
+            <field name="model">sg.simcard</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="create_date"/>
+                    <field name="create_uid"/>
+                    <field name="write_uid"/>
+                    <field name="write_date"/>
+                    <field name="number"/>
+                    <field name="provider_id"/>
+                    <field name="tariff_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Provider List/Tree-->
+        <record id="view_sg_simcard_provider_tree" model="ir.ui.view">
+            <field name="name">sg.simcard.provider.tree</field>
+            <field name="model">sg.simcard.provider</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="label"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Tariff List/Tree-->
+        <record id="view_sg_simcard_tariff_tree" model="ir.ui.view">
+            <field name="name">sg.simcard.tariff.tree</field>
+            <field name="model">sg.simcard.tariff</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="label"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Smartmeter Simcard List/Tree-->
+        <record id="view_sg_smartmeter_simcard_tree" model="ir.ui.view">
+            <field name="name">sg.smartmeter.simcard.tree</field>
+            <field name="model">sg.smartmeter.simcard</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="simcard_id" />
+                    <field name="begin_date" />
+                    <field name="end_date" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- Simcard Form -->
+        <record id="view_sg_simcard_form" model="ir.ui.view">
+            <field name="name">sg.simcard.form</field>
+            <field name="model">sg.simcard</field>
+            <field name="arch" type="xml">
+                <form string="Simcard" version="7.0">
+                	<sheet>
+                		<group>
+                            <field name="number"/>
+                            <field name="provider_id"/>
+                            <field name="tariff_id"/>
+	                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- Provider Form  -->
+        <record id="view_sg_simcard_provider_form" model="ir.ui.view">
+            <field name="name">sg.simcard.provider.form</field>
+            <field name="model">sg.simcard.provider</field>
+            <field name="arch" type="xml">
+                <form string="Provider" version="7.0">
+                	<sheet>
+                		<group>
+		                    <field name="label" />
+	                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tariff Form -->
+        <record id="view_sg_simcard_tariff_form" model="ir.ui.view">
+            <field name="name">sg.simcard.tariff.form</field>
+            <field name="model">sg.simcard.tariff</field>
+            <field name="arch" type="xml">
+                <form string="Tariff" version="7.0">
+                	<sheet>
+                		<group>
+		                    <field name="label" />
+	                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Smartmeter Simcard Form -->
+        <record id="view_sg_smartmeter_simcard_form" model="ir.ui.view">
+            <field name="name">sg.smartmeter.simcard.form</field>
+            <field name="model">sg.smartmeter.simcard</field>
+            <field name="arch" type="xml">
+                <form string="Smartmeter Simcard" version="7.0">
+                	<sheet>
+                		<group>
+		                    <field name="smartmeter_id" />
+                            <field name="simcard_id" />
+                            <field name="begin_date" />
+                            <field name="end_date" />
+	                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action Simcard -->
+        <record id="action_smartgrid_simcard" model="ir.actions.act_window">
+            <field name="name">Simcards</field>
+            <field name="res_model">sg.simcard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id"  eval="False"/>
+            <field name="context">{}</field>
+            <field name="help">Add here a new Simcard</field>
+        </record>
+
+        <!-- Action Provider -->
+        <record id="action_smartgrid_simcard_provider" model="ir.actions.act_window">
+            <field name="name">Provider</field>
+            <field name="res_model">sg.simcard.provider</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id"  eval="False"/>
+            <field name="context">{}</field>
+            <field name="help">Add here a new Provder</field>
+        </record>
+
+        <!-- Action Tariff -->
+        <record id="action_smartgrid_simcard_tariff" model="ir.actions.act_window">
+            <field name="name">Tariffs</field>
+            <field name="res_model">sg.simcard.tariff</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id"  eval="False"/>
+            <field name="context">{}</field>
+            <field name="help">Add here a new Tariff</field>
+        </record>
+
+        <!-- Action Smartmeter Simcard-->
+        <record id="action_smartgrid_smartmeter_simcard" model="ir.actions.act_window">
+            <field name="name">Smartmeter-Simcards</field>
+            <field name="res_model">sg.smartmeter.simcard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id"  eval="False"/>
+            <field name="context">{}</field>
+            <field name="help">Add here a new Relation between Smartmeter and Simcard</field>
+        </record>
+
+
+
+    </data>
+</openerp>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+        <record id="view_customer_kwh_contract_line_tree" model="ir.ui.view">
+            <field name="name">Customer kWh Line by Smartmeter</field>
+            <field name="model">sg.customer.kwh.line.wizard</field>
+            <field name="arch" type="xml">
+              <tree string="Customer kWh by Smartmeter">
+              	  <field name="day"/>
+                  <field name="sequence" invisible="1"/>
+                  <field name="measure_time" />
+                  <field name="kwh" />
+              </tree>
+            </field>
+        </record>    
+
+        <record id="view_customer_kwh_contract_line_graph" model="ir.ui.view">
+            <field name="name">Customer kWh Line by Smartmeter</field>
+            <field name="model">sg.customer.kwh.line.wizard</field>
+            <field name="arch" type="xml">
+              <graph string="Customer kWh by Smartmeter" type="bar">
+                  <field name="measure_time" type="row" />
+                  <field name="kwh" type="measure" />
+                  <field name="day" group="True"/>
+            </graph>
+            </field>
+        </record>
+
+
+        <record id="action_customer_kwh_contract" model="ir.actions.act_window">
+            <field name="name">Info 48h</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sg.customer.kwh.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_customer_kwh_contract"/>
+        </record>   
+
+
+
+    </data>
+</openerp>

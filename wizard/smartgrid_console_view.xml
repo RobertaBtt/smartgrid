@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_smartgrid_console_view_form" model="ir.ui.view">
+            <field name="name">smartgrid.console.form</field>
+            <field name="model">smartgrid.console</field>
+            <field name="arch" type="xml">
+                <form string="Scan for new Smartmeter">
+                    <h1>Smartgrid query builder</h1>
+                    <label for="sender_id" string="Serial number contatore" />
+                    <field name="sender_id" style="width: 10%%" />
+
+                    <newline/>
+                    <group>
+
+                    <field name="data_da"/>
+
+                    <field name="data_a"/>
+
+                    <newline/>
+                    </group>
+
+
+                    <button string='Scan Smartmeters' name="scan_new_smartmeters" type="object" class="btn-primary"/>
+                    <button string='Get Smartmeter data' name="get_smartmeter_data" type="object" class="btn-primary"/>
+                            <button string='Get count' name="get_transmission_count" type="object" class="btn-primary"/>
+                            <button string='Get last transmission' name="get_last_transmission" type="object" class="btn-primary"/>
+
+
+               </form>
+            </field>
+        </record>
+
+
+        <act_window
+                id="action_smartgrid_console"
+                name="Smartgrid Console"
+                res_model="smartgrid.console"
+                view_mode="form"
+                view_type="form" />
+    </data>
+</openerp>

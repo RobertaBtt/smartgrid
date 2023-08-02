@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+        <menuitem id="base.smart_grid_root" name="Smart Grid" groups="group_manager_smartgrid,group_energy_manager" sequence="65"/>
+
+        <menuitem id="menu_smart_grid_manager_root" name="Smart Grid Manager" parent="base.smart_grid_root" groups="group_manager_smartgrid" sequence="10" />
+
+            <menuitem id="menu_smart_grid_smartmeter"
+                      parent="menu_smart_grid_manager_root"
+                      action="action_smartgrid_smartmeter_view"
+                      string="Smartgrid Smartmeters"
+                      sequence="1"/>
+
+                <menuitem id="menu_smart_grid_smartmeter_data"
+                      parent="menu_smart_grid_manager_root"
+                      action="action_sg_data"
+                      string="Smartmeters data"/>
+
+            <menuitem id="menu_smart_grid_zone"
+                      parent="menu_smart_grid_manager_root"
+                      action="action_smartgrid_zone"
+                      string="Power Smartgrid Zones"
+                      sequence="2"/>
+
+            <menuitem id="menu_smart_grid_smartmeter_contracts"
+                  parent="menu_smart_grid_manager_root"
+                  action="action_smartgrid_smartemeter_contract"
+                  string="Smartgrid Smartmeter Contract"
+                  sequence="3"/>
+
+            <menuitem id="menu_smartgrid_simcard"
+                  parent="menu_smart_grid_manager_root"
+                  action="action_smartgrid_simcard"
+                  string="Simcards"
+                  sequence="4"/>
+
+            <menuitem id="menu_smartgrid_simcard_provider"
+                      parent="menu_smartgrid_simcard"
+                      action="action_smartgrid_simcard_provider"
+                      string="Providers"
+                      />
+
+            <menuitem id="menu_smartgrid_simcard_tariff"
+                      parent="menu_smartgrid_simcard"
+                      action="action_smartgrid_simcard_tariff"
+                      string="Tariffs"
+                     />
+
+            <menuitem id="menu_smartgrid_smartmeter_simcard"
+                      parent="menu_smartgrid_simcard"
+                      action="action_smartgrid_smartmeter_simcard"
+                      string="Smartmeter-Simcard"
+                     />
+
+
+             <menuitem id="menu_smart_grid_manager_zone_power"
+                      parent="menu_smart_grid_manager_root"
+                      action="action_smartgrid_zone_power"
+                      string="Smartgrid Zone Power"
+                      sequence="11" />
+
+            <menuitem id="menu_smart_grid_manager_alarms"
+                          parent="menu_smart_grid_manager_root"
+                          action="action_smartgrid_zone_alarm"
+                          string="Smartgrid Alarms Summary"
+                          sequence="12" />
+
+        <menuitem id="menu_smart_grid_manager_messages" parent="menu_smart_grid_manager_root" name="Messages" sequence="20" />
+
+                <menuitem id="menu_smart_grid_message_all"
+                          parent="menu_smart_grid_manager_messages"
+                          action="action_smartgrid_messages_all"
+                          string="All Smartgrid Messages"
+                          sequence="21" />
+
+                <menuitem id="menu_smart_grid_message_partner"
+                          parent="menu_smart_grid_manager_messages"
+                          action="action_smartgrid_messages_partner"
+                          string="Customer Smartgrid Messages"
+                          sequence="22" />
+
+        <!--<menuitem id="menu_smart_grid_manager_resources" parent="menu_smart_grid_manager_root" name="Smartgrid Resources" sequence="30" />-->
+
+                <!--<menuitem id="menu_smart_grid_url"-->
+                          <!--parent="menu_smart_grid_manager_resources"-->
+                          <!--action="action_smartgrid_url"-->
+                          <!--string="All Smartgrid Urls"-->
+                          <!--sequence="31" />-->
+
+                <!--<menuitem id="menu_action_smartgrid_attachment"-->
+                          <!--parent="menu_smart_grid_manager_resources"-->
+                          <!--action="action_smartgrid_attachment"-->
+                          <!--sequence="32"/>-->
+
+        <!--<menuitem id="menu_smart_grid_config" parent="menu_smart_grid_manager_root" name="Configurations" sequence="40" />-->
+
+    <!-- -->
+
+            <!--<menuitem id="menu_smartgrid_smartmeter_contract"-->
+                      <!--parent="menu_smart_grid_config"-->
+                      <!--action="action_smartgrid_smartemeter_contract"-->
+                      <!--string="Smartgrid Smartmeter Contract"-->
+                      <!--/>-->
+
+
+
+
+
+        <!-- Menu Energy Manager -->
+        <!--<menuitem id="menu_energy_manager_root" name="Energy Manager" parent="base.smart_grid_root" groups="group_energy_manager" sequence="50" />-->
+
+            <!--<menuitem id="menu_energy_manager_dashboars"-->
+                      <!--name="Smart Grid Dashboards"-->
+                      <!--parent="menu_energy_manager_root"-->
+                      <!--groups="group_energy_manager"-->
+                      <!--sequence="51" />-->
+
+                <!--<menuitem-->
+                    <!--id="menu_board_smartgrid"-->
+                    <!--parent="menu_energy_manager_dashboars"-->
+                    <!--action="open_board_smartgrid_action"-->
+                    <!--sequence="52"/>-->
+
+                <!--<menuitem-->
+                    <!--id="menu_board_smartgrid2"-->
+                    <!--parent="menu_energy_manager_dashboars"-->
+                    <!--action="open_board_smartgrid_action2"-->
+                    <!--sequence="53"/>-->
+
+
+            <!--<menuitem id="menu_energy_manager_message_partner"-->
+                      <!--parent="menu_energy_manager_root"-->
+                      <!--action="action_smartgrid_messages_partner"-->
+                      <!--string="Customer Smartgrid Messages"-->
+                      <!--sequence="54" />-->
+
+        <!--<menuitem id="menu_energy_manager_resources" parent="menu_energy_manager_root" name="Smartgrid Resources" sequence="60" />-->
+
+                <!--<menuitem id="menu_smart_grid_manager_url"-->
+                          <!--parent="menu_energy_manager_resources"-->
+                          <!--action="action_smartgrid_url"-->
+                          <!--string="All Smartgrid Urls"-->
+                          <!--sequence="61" />-->
+
+                <!--<menuitem id="menu_action_smartgrid_manager_attachment"-->
+                          <!--parent="menu_energy_manager_resources"-->
+                          <!--action="action_smartgrid_attachment"-->
+                          <!--sequence="62"/>-->
+
+
+
+        <menuitem id="menu_smartgrid_smartgrid_main" parent="base.smart_grid_root" name ="Smartgrid Console" groups="group_energy_manager" sequence="70" />
+
+            <menuitem
+                    name="Smartgrid Console"
+                    action="action_smartgrid_console"
+                    parent="menu_smartgrid_smartgrid_main"
+                    id="smartgrid_console_menu"
+                    sequence="71" />
+
+            <menuitem id="menu_action_customer_kwh_contract"
+                      action="action_customer_kwh_contract"
+                      parent="menu_smartgrid_smartgrid_main"
+                      sequence="72"
+                      groups="group_energy_manager"/>
+
+
+            <menuitem
+                    name="Ultima lettura contratto"
+                    action="action_smartgrid_get_data"
+                    parent="menu_smartgrid_smartgrid_main"
+                    id="smartgrid_get_data_wizard"
+                    sequence="73" />
+
+        <menuitem
+                    name="Letture Smartmeter"
+                    action="action_sg_meter_readings"
+                    parent="menu_smartgrid_smartgrid_main"
+                    id="smartgrid_sg_meter_readings"
+                    sequence="74" />
+
+    </data>
+</openerp>

@@ -1,0 +1,59 @@
+<openerp>
+    <data noupdate="0">
+
+       <record id="view_sg_url_tree" model="ir.ui.view">
+           <field name="name">smartgrid.url.tree</field>
+           <field name="model">sg.url</field>
+           <field name="arch" type="xml">
+               <tree>
+                   <field name="name"/>
+                   <field name="link" invisible="1"/>
+                   <field name="zone_id" />
+                   <button name="open_url" string="Open" icon="STOCK_GO_FORWARD" type="object"/>
+               </tree>
+           </field>
+       </record>
+
+       <record id="view_sg_url_form" model="ir.ui.view">
+           <field name="name">smartgrid.url.form</field>
+           <field name="model">sg.url</field>
+           <field name="arch" type="xml">
+               <form string="Smartgrid Url" version="7.0">
+                   <sheet>
+                       <group>
+                           <field name="zone_id" domain="[('user_ids','in',uid)]"/>
+                           <field name="name" />
+                           <field name="link" widget="url" placeholder="e.g. http://www.enermed.it/"/>
+                       </group>
+                   </sheet>
+               </form>
+           </field>
+       </record>
+
+       <record id="view_sg_url_filter" model="ir.ui.view">
+           <field name="name">smartgrid.url.filter</field>
+           <field name="model">sg.url</field>
+           <field name="arch" type="xml">
+               <search string="Search Smartgrid Urls">
+                   <field name="name"/>
+                   <field name="link" />
+                   <field name="zone_id" />
+               </search>
+           </field>
+       </record>
+
+       <!-- Action -->
+       <record id="action_smartgrid_url" model="ir.actions.act_window">
+           <field name="name">Smartgrid Urls</field>
+           <field name="res_model">sg.url</field>
+           <field name="view_type">form</field>
+           <field name="view_mode">tree,form</field>
+           <field name="search_view_id" ref="view_sg_url_filter"/>
+           <field name="domain">[('zone_id.user_ids','in',uid)]</field>
+           <field name="help">The Smartgrid Urls</field>
+       </record>
+
+
+
+    </data>
+</openerp>

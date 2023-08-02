@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="smartgrid_get_range_data_wizard_view_form" model="ir.ui.view">
+            <field name="name">Letture smartmeter range orario</field>
+            <field name="model">sg.get.range.data.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Letture Smartmeter Range Orario" version="7.0">
+                    <sheet>
+                        <group>
+                            <group width="20%">
+                                <field name="partner_id" required="1" domain="[('has_smartmeter','=',True), ('customer','=',True)]"/>
+                                <field name="contract_id" domain="[('partner_id','=',partner_id)]" widget="selection"/>
+                                <field name="smartmeter_id" domain="[('contract_id','=',contract_id)]" widget="selection" />
+                                <!--<field name="smartmeter_id" domain="[('smartmeter_id','=',contract_id)]" widget="selection" />-->
+                                <field name="type" />
+                                <field name="phases" />
+                                <newline/>
+                            </group>
+                            <newline/>
+                            <button string="Get Data"
+                                    name="getData"
+                                    type="object"
+                                    class="oe_highlight"/>
+                        </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <!--Risultati-->
+        <record id="smartgrid_get_data_wizard_view_tree" model="ir.ui.view">
+            <field name="name">sg.get.data.wizard.tree</field>
+            <field name="model">sg.get.data.wizard</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="sender_id"/>
+                    <field name="measurement_ts"/>
+                    <field name="energia_attiva_prelievo"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <act_window
+                id="action_smartgrid_get_data"
+                name="Ultima lettura contratto"
+                res_model="sg.get.data.wizard"
+                view_mode="form"
+                view_type="form" />
+
+
+
+
+
+
+    </data>
+</openerp>

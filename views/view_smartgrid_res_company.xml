@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record id="smartgrid_view_res_company" model="ir.ui.view">
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <field name="vat" position="after">
+                	<field name="sg_temp_api_token"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+ 

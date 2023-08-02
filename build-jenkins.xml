@@ -1,0 +1,25 @@
+<project name="${JOB_NAME}" default="pack-all">
+    <target name="clean">
+        <!--  Clean up  -->
+        <delete dir="${bsdir}/build"/>
+        <mkdir dir="${bsdir}/build"/>
+        <delete file="${bsdir}/workspace/${modname}.tar.bz2"/>
+        <delete file="${bsdir}/workspace/.${modname}.tar.bz2"/>
+    </target>
+    <!--  Create build directory  -->
+    <target name="copy">
+        <copy todir="${bsdir}/build/${modname}">
+            <fileset dir="${bsdir}/workspace"/>
+        </copy>
+        <delete file="${bsdir}/build/${modname}/build-jenkins.xml"/>
+    </target>
+    <target name="${JOB_NAME}">
+        <mkdir dir="${bsdir}/releases"/>
+        <tar destfile="${bsdir}/build/${modname}.tar.bz2" compression="bzip2" basedir="${bsdir}/build/${modname}"/>
+        <copy file="${bsdir}/build/${modname}.tar.bz2" todir="${bsdir}/workspace"/>
+        <echo file="${bsdir}/workspace/.${modname}.tar.bz2" append="false">${build_id}-${build_number}</echo>
+    </target>
+    <target name="pack-all" depends="clean,copy,${JOB_NAME}">
+        <!--  <delete dir="${STORE-TMP}" />  -->
+    </target>
+</project>

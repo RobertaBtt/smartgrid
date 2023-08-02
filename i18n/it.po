@@ -1,0 +1,1083 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* smartgrid
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-06 13:13+0000\n"
+"PO-Revision-Date: 2015-10-06 15:32+0100\n"
+"Last-Translator: Roberto Onnis <roberto.onnis@innoviu.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,help:smartgrid.open_board_smartgrid_action
+#: model:ir.actions.act_window,help:smartgrid.open_board_smartgrid_action2
+msgid ""
+"<div class=\"oe_empty_custom_dashboard\">\n"
+"                  <p>\n"
+"                    <b>Your smartgrid dashboard is empty.</b>\n"
+"                  </p><p>\n"
+"                    To add your first report into this dashboard, go to any\n"
+"                    menu, switch to list or graph view, and click <i>'Add "
+"to\n"
+"                    Dashboard'</i> in the extended search options.\n"
+"                  </p><p>\n"
+"                    You can filter and group data before inserting into the\n"
+"                    dashboard using the search options.\n"
+"                  </p>\n"
+"              </div>\n"
+"            "
+msgstr ""
+"<div class=\"oe_empty_custom_dashboard\">\n"
+"                  <p>\n"
+"                    <b>La dashboard della smartgrid è vuota.</b>\n"
+"                  </p><p>\n"
+"                    Per aggiungere il tuo primo report dentro la dashboard,\n"
+"                    entra in qualsiasi menu, portati su una lista o un "
+"grafico,\n"
+"                    e seleziona <i>Aggiungi a Dashboard</i> nelle opzioni "
+"della\n"
+"                    ricerca estesa.\n"
+"                    </p><p>\n"
+"                    Puoi filtrare e raggrupare i dati prima di inserirli "
+"nella dashboard\n"
+"                    utilizzando le opzioni di ricerca.\n"
+"                  </p>\n"
+"              </div>\n"
+"            "
+
+#. module: smartgrid
+#: model:ir.model,name:smartgrid.model_res_groups
+msgid "Access Groups"
+msgstr "Gruppi d'accesso"
+
+#. module: smartgrid
+#: field:sg.smartmeter.simcard,begin_date:0
+msgid "Activation Simcard inside smartmeter"
+msgstr "Attivazione Simcard nello smartmeter"
+
+#. module: smartgrid
+#: selection:ir.attachment,smartgrid_type:0
+msgid "Active Alarms"
+msgstr "Allarmi attivi"
+
+#. module: smartgrid
+#: view:sg.smartmeter:smartgrid.view_form_sg_smartmeter
+msgid "Active Energy"
+msgstr "Energia Attiva"
+
+#. module: smartgrid
+#: field:sg.smartmeter,offset_active_EXP:0
+msgid "Active Energy Export"
+msgstr "Energia attiva immessa nel circuito"
+
+#. module: smartgrid
+#: field:sg.smartmeter,offset_active_EXP_r:0
+msgid "Active Energy Export R"
+msgstr "Energia attiva immessa nel circuito (R)"
+
+#. module: smartgrid
+#: field:sg.smartmeter,offset_active_EXP_s:0
+msgid "Active Energy Export S"
+msgstr "Energia attiva immessa nel circuito (S)"
+
+#. module: smartgrid
+#: field:sg.smartmeter,offset_active_EXP_sum:0
+msgid "Active Energy Export Sum"
+msgstr "Energia attiva immessa nel circuito (Somma)"
+
+#. module: smartgrid
+#: field:sg.smartmeter,offset_active_EXP_t:0
+msgid "Active Energy Export T"
+msgstr "Energia attiva immessa nel circuito (T)"
+
+#. module: smartgrid
+#: field:sg.smartmeter,offset_active_IMP:0
+msgid "Active Energy Import"
+msgstr "Energia attiva consumata"
+
+#. module: smartgrid
+#: field:sg.smartmeter,offset_active_IMP_r:0
+msgid "Active Energy Import R"
+msgstr "Energia attiva consumata (R)"
+
+#. module: smartgrid
+#: field:sg.smartmeter,offset_active_IMP_s:0
+msgid "Active Energy Import S"
+msgstr "Energia attiva consumata (S)"
+
+#. module: smartgrid
+#: field:sg.smartmeter,offset_active_IMP_sum:0
+msgid "Active Energy Import Sum"
+msgstr "Energia attiva consumata (Somma)"
+
+#. module: smartgrid
+#: field:sg.smartmeter,offset_active_IMP_t:0
+msgid "Active Energy Import T"
+msgstr "Energia attiva consumata (T)"
+
+#. module: smartgrid
+#: field:sg.customer.kwh.wizard,pa:0
+msgid "Active Power"
+msgstr "Active Power"
+
+#. module: smartgrid
+#: field:sg.zone.power,active_power_out:0
+msgid "Active Power Drawn"
+msgstr "Active Power Drawn"
+
+#. module: smartgrid
+#: field:sg.zone.power,active_power_in:0
+msgid "Active Power Input"
+msgstr "Active Power Input"
+
+#. module: smartgrid
+#: view:sg.zone:smartgrid.view_sg_zone_form
+msgid "Active Power Values"
+msgstr "Active Power Values"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,help:smartgrid.action_smartgrid_simcard_provider
+msgid "Add here a new Provder"
+msgstr "Aggiungi nuovo Provider"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,help:smartgrid.action_smartgrid_smartmeter_simcard
+msgid "Add here a new Relation between Smartmeter and Simcard"
+msgstr "Aggiungi relazione tra Smartmeter e Simcard"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,help:smartgrid.action_smartgrid_simcard
+msgid "Add here a new Simcard"
+msgstr "Aggiungi Simcard"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,help:smartgrid.action_smartgrid_simcard_tariff
+msgid "Add here a new Tariff"
+msgstr "Aggiungi nuova tariffa"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,name:smartgrid.action_smartgrid_messages_all
+#: model:ir.ui.menu,name:smartgrid.menu_smart_grid_message_all
+msgid "All Smartgrid Messages"
+msgstr "Tutti i messaggi della Smartgrid"
+
+#. module: smartgrid
+#: field:sg.zone,user_ids:0
+msgid "Allowed Users"
+msgstr "Utenti abilitati"
+
+#. module: smartgrid
+#: view:ir.attachment:smartgrid.view_attachment_smartgrid_form
+msgid "Attached To"
+msgstr "Allegato a"
+
+#. module: smartgrid
+#: view:ir.attachment:smartgrid.view_attachment_smartgrid_search
+msgid "Attachment"
+msgstr "Allegato"
+
+#. module: smartgrid
+#: view:ir.attachment:smartgrid.view_attachment_smartgrid_form
+#: view:ir.attachment:smartgrid.view_attachment_smartgrid_search
+#: view:ir.attachment:smartgrid.view_attachment_smartgrid_tree
+msgid "Attachments"
+msgstr "Allegati"
+
+#. module: smartgrid
+#: field:sg.customer.kwh.wizard,pau:0
+msgid "Auto-consumed Power"
+msgstr "Potenza autoconsumata"
+
+#. module: smartgrid
+#: code:addons/smartgrid/wizard/smartgrid_customer_kwh_wizard.py:155
+#: code:addons/smartgrid/wizard/smartgrid_customer_kwh_wizard.py:175
+#, python-format
+msgid "Bad request to smartgrid hub!"
+msgstr "Richiesta errata all'hub smartgrid!"
+
+#. module: smartgrid
+#: field:sg.smartmeter.contract,begin_date:0
+msgid "Begin date smart meter"
+msgstr "Data di inizio"
+
+#. module: smartgrid
+#: field:sg.zone.power,color:0
+msgid "Color Index"
+msgstr "Indice Colore"
+
+#. module: smartgrid
+#: view:sg.zone:smartgrid.view_sg_zone_form
+msgid "Config Values for Customer Energy Graph"
+msgstr "Valori di configurazione per il grafico energetico del cliente"
+
+#. module: smartgrid
+#: model:ir.ui.menu,name:smartgrid.menu_smart_grid_config
+msgid "Configurations"
+msgstr "Configurazioni"
+
+#. module: smartgrid
+#: field:sg.smartmeter.contract,contract_id:0
+msgid "Contract"
+msgstr "Contratto"
+
+#. module: smartgrid
+#: field:sg.customer.kwh.wizard,partner_id:0
+msgid "Contract Owner"
+msgstr "Titolare Contratto"
+
+#. module: smartgrid
+#: model:ir.model,name:smartgrid.model_sg_smartmeter_contract
+#: view:sg.smartmeter.contract:smartgrid.view_sg_smartmeter_contract_tree
+msgid "Contract Smartmeter"
+msgstr "Contratto Smartmeter"
+
+#. module: smartgrid
+#: field:sg.customer.kwh.line.wizard,create_uid:0
+#: field:sg.customer.kwh.wizard,create_uid:0 field:sg.message,create_uid:0
+#: field:sg.simcard,create_uid:0 field:sg.simcard.provider,create_uid:0
+#: field:sg.simcard.tariff,create_uid:0 field:sg.smartmeter,create_uid:0
+#: field:sg.smartmeter.contract,create_uid:0
+#: field:sg.smartmeter.simcard,create_uid:0 field:sg.url,create_uid:0
+#: field:sg.zone,create_uid:0 field:sg.zone.power,create_uid:0
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: smartgrid
+#: field:sg.customer.kwh.line.wizard,create_date:0
+#: field:sg.customer.kwh.wizard,create_date:0 field:sg.message,create_date:0
+#: field:sg.simcard,create_date:0 field:sg.simcard.provider,create_date:0
+#: field:sg.simcard.tariff,create_date:0 field:sg.smartmeter,create_date:0
+#: field:sg.smartmeter.contract,create_date:0
+#: field:sg.smartmeter.simcard,create_date:0 field:sg.url,create_date:0
+#: field:sg.zone,create_date:0 field:sg.zone.power,create_date:0
+msgid "Created on"
+msgstr "Creato in data"
+
+#. module: smartgrid
+#: view:ir.attachment:smartgrid.view_attachment_smartgrid_form
+msgid "Creation"
+msgstr "Creazione"
+
+#. module: smartgrid
+#: field:sg.message,creation_date:0
+msgid "Creation Date"
+msgstr "Data di creazione"
+
+#. module: smartgrid
+#: field:sg.customer.kwh.wizard,name:0
+msgid "Customer Contract Number"
+msgstr "Numero Contratto"
+
+#. module: smartgrid
+#: code:addons/smartgrid/wizard/smartgrid_customer_kwh_wizard.py:230
+#: model:ir.actions.act_window,name:smartgrid.action_customer_kwh_contract
+#: model:ir.ui.menu,name:smartgrid.menu_action_customer_kwh_contract
+#: view:sg.customer.kwh.line.wizard:smartgrid.view_customer_kwh_contract_line_graph
+#: view:sg.customer.kwh.line.wizard:smartgrid.view_customer_kwh_contract_line_tree
+#: view:sg.customer.kwh.wizard:smartgrid.view_customer_kwh_contract
+#, python-format
+msgid "Customer kWh by Smartmeter"
+msgstr "Energia Consumata per Smartmeter"
+
+#. module: smartgrid
+#: view:sg.customer.kwh.wizard:smartgrid.view_customer_kwh_contract
+msgid "Customer Power Values (kW)"
+msgstr "Valori Potenze (kW)"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,name:smartgrid.action_smartgrid_messages_partner
+#: model:ir.ui.menu,name:smartgrid.menu_energy_manager_message_partner
+#: model:ir.ui.menu,name:smartgrid.menu_smart_grid_message_partner
+msgid "Customer Smartgrid Messages"
+msgstr "Messaggi Smartgrid cliente"
+
+#. module: smartgrid
+#: view:ir.attachment:smartgrid.view_attachment_smartgrid_form
+msgid "Data"
+msgstr "Dati"
+
+#. module: smartgrid
+#: field:sg.customer.kwh.wizard,data_acquired:0
+msgid "Datas acquired"
+msgstr "Dati Acquisiti"
+
+#. module: smartgrid
+#: field:sg.customer.kwh.wizard,request_time:0
+msgid "Date Time Measure "
+msgstr "Data e ora misura"
+
+#. module: smartgrid
+#: sql_constraint:sg.zone.power:0
+msgid "Date and Zone must be unique!"
+msgstr "Data e Zona già presenti!"
+
+#. module: smartgrid
+#: code:addons/smartgrid/model/ir_attachment.py:188
+#, python-format
+msgid "DeleteError"
+msgstr "Errore Cancellazione"
+
+#. module: smartgrid
+#: field:sg.customer.kwh.line.wizard,wizard_id:0
+msgid "Depends on"
+msgstr "Dipende da"
+
+#. module: smartgrid
+#: view:ir.attachment:smartgrid.view_attachment_smartgrid_form
+#: field:sg.smartmeter,description:0 field:sg.zone,description:0
+msgid "Description"
+msgstr "Descrizione"
+
+#. module: smartgrid
+#: view:ir.attachment:smartgrid.view_attachment_smartgrid_tree
+msgid "Download"
+msgstr "Download"
+
+#. module: smartgrid
+#: code:addons/smartgrid/model/ir_attachment.py:148
+#, python-format
+msgid "Download S3 File"
+msgstr "Download S3 File"
+
+#. module: smartgrid
+#: field:sg.smartmeter.contract,end_date:0
+msgid "End date smart meter"
+msgstr "Data fine dello Smartmeter"
+
+#. module: smartgrid
+#: model:ir.ui.menu,name:smartgrid.menu_energy_manager_root
+#: model:res.groups,name:smartgrid.group_energy_manager
+msgid "Energy Manager"
+msgstr "Energy Manager"
+
+#. module: smartgrid
+#: code:addons/smartgrid/wizard/smartgrid_customer_kwh_wizard.py:205
+#, python-format
+msgid "Error! no kWh to show."
+msgstr "Errore! nessun valore da mostrare."
+
+#. module: smartgrid
+#: selection:sg.smartmeter,type:0
+msgid "Exchange"
+msgstr "Scambio"
+
+#. module: smartgrid
+#: selection:ir.attachment,smartgrid_type:0
+msgid "Forecast Next 15 Days"
+msgstr "Previsione prossimi 15 giorni"
+
+#. module: smartgrid
+#: view:sg.customer.kwh.wizard:smartgrid.view_customer_kwh_contract
+msgid "Get Smartgrid Data"
+msgstr "Preleva dati smartgrid"
+
+#. module: smartgrid
+#: help:sg.customer.kwh.wizard,zone_id:0
+msgid "Gets target and threshold values"
+msgstr "Preleva valori di target e di soglia"
+
+#. module: smartgrid
+#: view:sg.customer.kwh.wizard:smartgrid.view_customer_kwh_contract
+msgid "Graph"
+msgstr "Grafico"
+
+#. module: smartgrid
+#: field:sg.smartmeter,heroltd_serial_number:0
+msgid "Heroltd Serial Number"
+msgstr "S/N Heroltd"
+
+#. module: smartgrid
+#: view:ir.attachment:smartgrid.view_attachment_smartgrid_form
+msgid "History"
+msgstr "Storico"
+
+#. module: smartgrid
+#: field:sg.customer.kwh.line.wizard,id:0 field:sg.customer.kwh.wizard,id:0
+#: field:sg.message,id:0 field:sg.simcard,id:0 field:sg.simcard.provider,id:0
+#: field:sg.simcard.tariff,id:0 field:sg.smartmeter,id:0
+#: field:sg.smartmeter.contract,id:0 field:sg.smartmeter.simcard,id:0
+#: field:sg.url,id:0 field:sg.zone,id:0 field:sg.zone.power,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: smartgrid
+#: code:addons/smartgrid/wizard/smartgrid_customer_kwh_wizard.py:153
+#: code:addons/smartgrid/wizard/smartgrid_customer_kwh_wizard.py:173
+#, python-format
+msgid "Invalid User!"
+msgstr "Utente non valido!"
+
+#. module: smartgrid
+#: field:sg.smartmeter,is_weather_station:0
+msgid "Is Weather Station"
+msgstr "Stazione meteo"
+
+#. module: smartgrid
+#: field:sg.customer.kwh.line.wizard,kwh:0
+msgid "kWh"
+msgstr "kWh"
+
+#. module: smartgrid
+#: field:sg.customer.kwh.wizard,kwh_lines:0
+msgid "kWh Values for each Smartmeter"
+msgstr "Valori in kWh per ogni Smartmeter"
+
+#. module: smartgrid
+#: view:sg.customer.kwh.wizard:smartgrid.view_customer_kwh_contract
+msgid "kWh data lines"
+msgstr "dati linee kWh"
+
+#. module: smartgrid
+#: field:sg.customer.kwh.line.wizard,write_uid:0
+#: field:sg.customer.kwh.wizard,write_uid:0 field:sg.message,write_uid:0
+#: field:sg.simcard,write_uid:0 field:sg.simcard.provider,write_uid:0
+#: field:sg.simcard.tariff,write_uid:0 field:sg.smartmeter,write_uid:0
+#: field:sg.smartmeter.contract,write_uid:0
+#: field:sg.smartmeter.simcard,write_uid:0 field:sg.url,write_uid:0
+#: field:sg.zone,write_uid:0 field:sg.zone.power,write_uid:0
+msgid "Last Updated by"
+msgstr "Aggiornato da"
+
+#. module: smartgrid
+#: field:sg.customer.kwh.line.wizard,write_date:0
+#: field:sg.customer.kwh.wizard,write_date:0 field:sg.message,write_date:0
+#: field:sg.simcard,write_date:0 field:sg.simcard.provider,write_date:0
+#: field:sg.simcard.tariff,write_date:0 field:sg.smartmeter,write_date:0
+#: field:sg.smartmeter.contract,write_date:0
+#: field:sg.smartmeter.simcard,write_date:0 field:sg.url,write_date:0
+#: field:sg.zone,write_date:0 field:sg.zone.power,write_date:0
+msgid "Last Updated on"
+msgstr "Data ultimo aggiornamento"
+
+#. module: smartgrid
+#: field:sg.smartmeter,latitude:0
+msgid "Latitude"
+msgstr "Latitudine"
+
+#. module: smartgrid
+#: field:sg.smartmeter,longitude:0
+msgid "Longitude"
+msgstr "Longitudine"
+
+#. module: smartgrid
+#: field:sg.zone,threshold_max:0
+msgid "Max Threshold"
+msgstr "Soglia massima"
+
+#. module: smartgrid
+#: field:sg.zone.power,name:0
+msgid "Measure Date"
+msgstr "Data della misurazione"
+
+#. module: smartgrid
+#: model:ir.ui.menu,name:smartgrid.menu_smart_grid_manager_messages
+msgid "Messages"
+msgstr "Messaggi"
+
+#. module: smartgrid
+#: field:sg.zone,threshold_min:0
+msgid "Min Threshold"
+msgstr "Soglia Minima"
+
+#. module: smartgrid
+#: field:sg.smartmeter,model_number:0
+msgid "Model Number"
+msgstr "Numero del modello"
+
+#. module: smartgrid
+#: field:sg.message,name:0 field:sg.url,name:0
+msgid "Name"
+msgstr "Nome"
+
+#. module: smartgrid
+#: view:sg.zone.power:smartgrid.view_sg_zone_power_kanban
+msgid "New Message"
+msgstr "Nuovo messaggio"
+
+#. module: smartgrid
+#: field:sg.zone.power,meter_number:0
+msgid "Number of Meters"
+msgstr "Numero di meter"
+
+#. module: smartgrid
+#: selection:sg.smartmeter,type:0
+msgid "Only Production"
+msgstr "Solo Produzione"
+
+#. module: smartgrid
+#: view:sg.url:smartgrid.view_sg_url_tree
+msgid "Open"
+msgstr "Apri"
+
+#. module: smartgrid
+#: field:sg.message,partner_id:0
+msgid "Partner"
+msgstr "Partner"
+
+#. module: smartgrid
+#: view:sg.zone:smartgrid.view_sg_zone_form
+msgid "Permissions"
+msgstr "Permessi"
+
+#. module: smartgrid
+#: field:sg.smartmeter,phases:0
+msgid "Phases"
+msgstr "Fasi"
+
+#. module: smartgrid
+#: field:sg.simcard,number:0
+msgid "Phone number"
+msgstr "Numero di telefono"
+
+#. module: smartgrid
+#: selection:ir.attachment,smartgrid_type:0
+msgid "Power for All Companies"
+msgstr "Potenza per tutte le Aziende"
+
+#. module: smartgrid
+#: selection:ir.attachment,smartgrid_type:0
+msgid "Power for All Customers"
+msgstr "Potenza per tutti i Clienti"
+
+#. module: smartgrid
+#: selection:ir.attachment,smartgrid_type:0
+msgid "Power for All Prosumers"
+msgstr "Potenza per tutti i Prosumer"
+
+#. module: smartgrid
+#: field:sg.customer.kwh.wizard,pp:0
+msgid "Produced Power"
+msgstr "Potenza Prodotta"
+
+#. module: smartgrid
+#: selection:sg.smartmeter,type:0
+msgid "Production"
+msgstr "Produzione"
+
+#. module: smartgrid
+#: view:sg.customer.kwh.wizard:smartgrid.view_customer_kwh_contract
+msgid "Production Power"
+msgstr "Potenza Prodotta"
+
+#. module: smartgrid
+#: field:sg.customer.kwh.wizard,profile:0
+msgid "Profile"
+msgstr "Profilo"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,name:smartgrid.action_smartgrid_simcard_provider
+#: model:ir.ui.menu,name:smartgrid.menu_smartgrid_simcard_provider
+#: view:sg.simcard.provider:smartgrid.view_sg_simcard_provider_form
+#: field:sg.simcard.provider,label:0
+msgid "Provider"
+msgstr "Provider"
+
+#. module: smartgrid
+#: field:sg.smartmeter,offset_reactive_EXP:0
+msgid "Reactive Energy Export"
+msgstr "Energia reattiva immessa nel circuito"
+
+#. module: smartgrid
+#: field:sg.smartmeter,offset_reactive_EXP_r:0
+msgid "Reactive Energy Export R"
+msgstr "Energia reattiva immessa nel circuito (R)"
+
+#. module: smartgrid
+#: field:sg.smartmeter,offset_reactive_EXP_s:0
+msgid "Reactive Energy Export S"
+msgstr "Energia reattiva immessa nel circuito (S)"
+
+#. module: smartgrid
+#: field:sg.smartmeter,offset_reactive_EXP_sum:0
+msgid "Reactive Energy Export Sum"
+msgstr "Energia reattiva immessa nel circuito (Somma)"
+
+#. module: smartgrid
+#: field:sg.smartmeter,offset_reactive_EXP_t:0
+msgid "Reactive Energy Export T"
+msgstr "Energia reattiva immessa nel circuito (T)"
+
+#. module: smartgrid
+#: field:sg.smartmeter,offset_reactive_IMP:0
+msgid "Reactive Energy Import"
+msgstr "Energia reattiva immessa nel circuito (R)"
+
+#. module: smartgrid
+#: field:sg.smartmeter,offset_reactive_IMP_r:0
+msgid "Reactive Energy Import R"
+msgstr "Energia reattiva consumata (R)"
+
+#. module: smartgrid
+#: field:sg.smartmeter,offset_reactive_IMP_s:0
+msgid "Reactive Energy Import S"
+msgstr "Energia reattiva consumata (S)"
+
+#. module: smartgrid
+#: field:sg.smartmeter,offset_reactive_IMP_sum:0
+msgid "Reactive Energy Import Sum"
+msgstr "Energia reattiva consumata (Somma)"
+
+#. module: smartgrid
+#: field:sg.smartmeter,offset_reactive_IMP_t:0
+msgid "Reactive Energy Import T"
+msgstr "Energia reattiva consumata (T)"
+
+#. module: smartgrid
+#: field:sg.customer.kwh.wizard,pr:0
+msgid "Reactive Power"
+msgstr "Potenza Reattiva"
+
+#. module: smartgrid
+#: view:sg.smartmeter:smartgrid.view_form_sg_smartmeter
+msgid "Rective Energy"
+msgstr "Energia Reattiva"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,help:smartgrid.action_smartgrid_smartemeter_contract
+msgid "Relation between Smartmeters and Contracts"
+msgstr "Relazione tra Smartmeters e Contratti"
+
+#. module: smartgrid
+#: view:sg.message:smartgrid.view_sg_message_filter
+msgid "Search Smartgrid Message"
+msgstr "Cerca Messaggio Smartgrid"
+
+#. module: smartgrid
+#: view:sg.zone.power:smartgrid.view_sg_zone_power_filter
+msgid "Search Smartgrid Power"
+msgstr "Cerca Potenza Smartgrid"
+
+#. module: smartgrid
+#: view:sg.url:smartgrid.view_sg_url_filter
+msgid "Search Smartgrid Urls"
+msgstr "Cerca Url per smartgrid"
+
+#. module: smartgrid
+#: view:sg.zone:smartgrid.view_sg_zone_filter
+msgid "Search Zone"
+msgstr "Cerca Zona"
+
+#. module: smartgrid
+#: view:sg.smartmeter:smartgrid.view_sg_smartmeter_filter
+msgid "Search smartmeter"
+msgstr "Cerca Smartmeter"
+
+#. module: smartgrid
+#: view:sg.customer.kwh.wizard:smartgrid.view_customer_kwh_contract
+msgid "Select contract code and then press get data button"
+msgstr ""
+"Seleziona il codice contratto e premi quindi sul bottone \"Preleva dati smartgrid\""
+
+#. module: smartgrid
+#: field:sg.smartmeter,name:0
+msgid "Serial Number"
+msgstr "Numero Seriale"
+
+#. module: smartgrid
+#: sql_constraint:sg.smartmeter:0
+msgid "Serial Number must be unique!"
+msgstr "Numero Seriale già inserito"
+
+#. module: smartgrid
+#: field:sg.simcard,provider_id:0
+msgid "Sim Provider"
+msgstr "Provider della Simcard"
+
+#. module: smartgrid
+#: field:sg.simcard,tariff_id:0
+msgid "Sim Tariff"
+msgstr "Piano Tariffario della Simcard"
+
+#. module: smartgrid
+#: model:ir.model,name:smartgrid.model_sg_simcard
+#: view:sg.simcard:smartgrid.view_sg_simcard_form
+#: field:sg.smartmeter.simcard,simcard_id:0
+msgid "Simcard"
+msgstr "Simcard"
+
+#. module: smartgrid
+#: model:ir.model,name:smartgrid.model_sg_simcard_provider
+msgid "Simcard Provider"
+msgstr "Provider della Simcard"
+
+#. module: smartgrid
+#: model:ir.model,name:smartgrid.model_sg_simcard_tariff
+msgid "Simcard Tariff"
+msgstr "Piano tariffario della Simcard"
+
+#. module: smartgrid
+#: field:sg.smartmeter.simcard,end_date:0
+msgid "Simcard dismiss for the smartmeter"
+msgstr "Simcard dismessa in data"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,name:smartgrid.action_smartgrid_simcard
+#: model:ir.ui.menu,name:smartgrid.menu_smartgrid_simcard
+msgid "Simcards"
+msgstr "Lista Simcard"
+
+#. module: smartgrid
+#: selection:sg.smartmeter,phases:0
+msgid "Single-phase"
+msgstr "Monofase"
+
+#. module: smartgrid
+#: model:ir.ui.menu,name:smartgrid.menu_energy_manager_dashboars
+#: model:ir.ui.menu,name:smartgrid.menu_smart_grid_manager_dashboars
+msgid "Smart Grid Dashboards"
+msgstr "Dashboard Smartgrid"
+
+#. module: smartgrid
+#: field:sg.zone,smart_grid_group:0
+msgid "Smart Grid Group"
+msgstr "Gruppo Smart Grid"
+
+#. module: smartgrid
+#: model:ir.ui.menu,name:smartgrid.menu_smart_grid_manager_root
+#: model:res.groups,name:smartgrid.group_manager_smartgrid
+msgid "Smart Grid Manager"
+msgstr "Smart Grid Manager"
+
+#. module: smartgrid
+#: field:ir.attachment,smartgrid_type:0
+msgid "Smart Grid Type"
+msgstr "Tipo Smart Grid"
+
+#. module: smartgrid
+#: field:sg.smartmeter.contract,smartmeter_id:0
+#: field:sg.smartmeter.simcard,smartmeter_id:0
+msgid "Smart Meter"
+msgstr "Smart Meter"
+
+#. module: smartgrid
+#: field:sg.smartmeter,type:0
+msgid "Smart Meter Type"
+msgstr "Tipo"
+
+#. module: smartgrid
+#: field:sg.zone,smartmeter_ids:0
+msgid "Smart Meters"
+msgstr "Smart Meters"
+
+#. module: smartgrid
+#: model:ir.module.category,name:smartgrid.module_smartgrid_category
+msgid "SmartGrid"
+msgstr "SmartGrid"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,name:smartgrid.action_smartgrid_attachment
+#: model:ir.ui.menu,name:smartgrid.menu_action_smartgrid_attachment
+#: model:ir.ui.menu,name:smartgrid.menu_action_smartgrid_manager_attachment
+msgid "SmartGrid Attachments"
+msgstr "Allegati SmartGrid"
+
+#. module: smartgrid
+#: field:ir.attachment,zone_id:0 field:sg.customer.kwh.wizard,zone_id:0
+#: field:sg.message,message:0 field:sg.message,zone_id:0
+#: field:sg.smartmeter,zone_id:0 field:sg.url,zone_id:0
+#: field:sg.zone.power,zone_id:0
+msgid "SmartGrid Zone"
+msgstr "Zona Smartgrid"
+
+#. module: smartgrid
+#: view:ep.contract:smartgrid.smartgrid_view_ep_contract_smartmeter
+#: view:ir.attachment:smartgrid.view_attachment_smartgrid_form
+msgid "Smartgrid"
+msgstr "Smartgrid"
+
+#. module: smartgrid
+#: view:board.board:smartgrid.board_smartgrid_view
+#: view:board.board:smartgrid.board_smartgrid_view2
+#: model:ir.actions.act_window,name:smartgrid.open_board_smartgrid_action
+#: model:ir.actions.act_window,name:smartgrid.open_board_smartgrid_action2
+#: model:ir.ui.menu,name:smartgrid.menu_board_smartgrid
+#: model:ir.ui.menu,name:smartgrid.menu_board_smartgrid2
+msgid "Smartgrid Dashboard"
+msgstr "Smartgrid Dashboard"
+
+#. module: smartgrid
+#: view:sg.message:smartgrid.view_sg_message_form
+msgid "Smartgrid Message"
+msgstr "Messaggio Smartgrid"
+
+#. module: smartgrid
+#: view:sg.zone.power:smartgrid.view_sg_zone_power_form
+msgid "Smartgrid Power"
+msgstr "Potenza Smartgrid"
+
+#. module: smartgrid
+#: model:ir.ui.menu,name:smartgrid.menu_energy_manager_resources
+#: model:ir.ui.menu,name:smartgrid.menu_smart_grid_manager_resources
+msgid "Smartgrid Resources"
+msgstr "Risorse Smartgrid"
+
+#. module: smartgrid
+#: view:sg.smartmeter:smartgrid.view_form_sg_smartmeter
+msgid "Smartgrid Smartmeter"
+msgstr "Smartgrid Smartmeter"
+
+#. module: smartgrid
+#: view:sg.url:smartgrid.view_sg_url_form
+msgid "Smartgrid Url"
+msgstr "Smartgrid Url"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,name:smartgrid.action_smartgrid_url
+#: model:ir.ui.menu,name:smartgrid.menu_smart_grid_manager_url
+#: model:ir.ui.menu,name:smartgrid.menu_smart_grid_url
+msgid "Smartgrid Urls"
+msgstr "Smartgrid Urls"
+
+#. module: smartgrid
+#: view:sg.zone:smartgrid.view_sg_zone_form
+msgid "Smartgrid Zone"
+msgstr "Zona Smartgrid"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,name:smartgrid.action_smartgrid_zone_power
+#: model:ir.ui.menu,name:smartgrid.menu_smart_grid_manager_zone_power
+msgid "Smartgrid Zone Power"
+msgstr "Smartgrid Zone Power"
+
+#. module: smartgrid
+#: view:sg.smartmeter:smartgrid.view_sg_smartmeter_form
+msgid "Smartgrid smartmeter"
+msgstr "Smartgrid smartmeter"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,name:smartgrid.action_smartgrid_smartemeter_contract
+#: model:ir.ui.menu,name:smartgrid.menu_smartgrid_smartmeter_contract
+msgid "Smartmeter Contract"
+msgstr "Contratto Smartmeter"
+
+#. module: smartgrid
+#: view:sg.smartmeter:smartgrid.view_form_sg_smartmeter
+msgid "Smartmeter Offsets"
+msgstr "Smartmeter Valori di partenza"
+
+#. module: smartgrid
+#: view:sg.smartmeter.simcard:smartgrid.view_sg_smartmeter_simcard_form
+msgid "Smartmeter Simcard"
+msgstr "Smartmeter Simcard"
+
+#. module: smartgrid
+#: model:ir.model,name:smartgrid.model_sg_smartmeter_simcard
+msgid "Smartmeter Simcard relation"
+msgstr "Relazione Smartmeter Simcard"
+
+#. module: smartgrid
+#: view:sg.smartmeter:smartgrid.view_form_sg_smartmeter
+msgid "Smartmeter Technical Informations"
+msgstr "Scheda Tecnica"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,name:smartgrid.action_smartgrid_smartmeter_simcard
+#: model:ir.ui.menu,name:smartgrid.menu_smartgrid_smartmeter_simcard
+msgid "Smartmeter-Simcards"
+msgstr "Smartmeter-Simcards"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,name:smartgrid.action_smartgrid_smartmeter_view
+#: model:ir.ui.menu,name:smartgrid.menu_smart_grid_smartmeter
+msgid "Smartmeters"
+msgstr "Smartmeters"
+
+#. module: smartgrid
+#: field:ep.contract,smartmeter_contract_ids:0
+msgid "Smartmeters Contracts"
+msgstr "Smartmeters Contratti"
+
+#. module: smartgrid
+#: view:sg.smartmeter.contract:smartgrid.view_sg_smartmeter_contract_form
+msgid "Smatermeter Contract"
+msgstr "Smartmeter Contratto"
+
+#. module: smartgrid
+#: field:sg.zone,target_value:0
+msgid "Target Value"
+msgstr "Valore Target"
+
+#. module: smartgrid
+#: view:sg.simcard.tariff:smartgrid.view_sg_simcard_tariff_form
+#: field:sg.simcard.tariff,label:0
+msgid "Tariff"
+msgstr "Piano Tariffario"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,name:smartgrid.action_smartgrid_simcard_tariff
+#: model:ir.ui.menu,name:smartgrid.menu_smartgrid_simcard_tariff
+msgid "Tariffs"
+msgstr "Piani Tariffario"
+
+#. module: smartgrid
+#: field:res.users,sg_temp_api_token:0
+msgid "Temporary Smartgrid API Token"
+msgstr "Valore temporaneo del token per le API"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,help:smartgrid.action_smartgrid_messages_all
+msgid "The Smartgrid Messages"
+msgstr "Messaggi Smartgrid"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,help:smartgrid.action_smartgrid_messages_partner
+msgid "The Smartgrid Messages to a Customer"
+msgstr "Messaggi Smartgrid al Cliente"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,help:smartgrid.action_smartgrid_zone_power
+msgid "The Smartgrid Power"
+msgstr "Potenza Smartgrid"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,help:smartgrid.action_smartgrid_url
+msgid "The Smartgrid Urls"
+msgstr "Url Smartgrid"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,help:smartgrid.action_smartgrid_zone
+msgid "The Smartgrid Zones"
+msgstr "Zone della Smartgrid"
+
+#. module: smartgrid
+#: model:ir.actions.act_window,help:smartgrid.action_smartgrid_smartmeter_view
+msgid "The Smartgrid smartmeters"
+msgstr "Smartmeters della Smartgrid"
+
+#. module: smartgrid
+#: sql_constraint:sg.simcard:0
+msgid "This Number already exists"
+msgstr "Questo numero é stato già inserito"
+
+#. module: smartgrid
+#: sql_constraint:sg.simcard.provider:0
+msgid "This Provider already exists"
+msgstr "Questo Provider é stato già inserito"
+
+#. module: smartgrid
+#: sql_constraint:sg.simcard.tariff:0
+msgid "This Tariff already exists"
+msgstr "Questo piano tariffario esiste già"
+
+#. module: smartgrid
+#: code:addons/smartgrid/model/ir_attachment.py:175
+#: code:addons/smartgrid/model/ir_attachment.py:189
+#, python-format
+msgid "This file is synchronized with S3!"
+msgstr "Questo file è sincronizzato con Amazon S3!"
+
+#. module: smartgrid
+#: selection:sg.smartmeter,phases:0
+msgid "Three-phase"
+msgstr "Trifase"
+
+#. module: smartgrid
+#: field:sg.customer.kwh.line.wizard,measure_time:0
+msgid "Time of measure"
+msgstr "Orario misurazione"
+
+#. module: smartgrid
+#: field:sg.message,to_all:0
+msgid "To all Customers"
+msgstr "A tutti i Clienti"
+
+#. module: smartgrid
+#: view:sg.zone.power:smartgrid.view_sg_zone_power_kanban
+msgid "Total Net Value at"
+msgstr "Valore netto totale al"
+
+#. module: smartgrid
+#: view:sg.zone.power:smartgrid.view_sg_zone_power_kanban
+msgid "Total Number of Contracts:"
+msgstr "Numero totale di contratti:"
+
+#. module: smartgrid
+#: view:sg.zone.power:smartgrid.view_sg_zone_power_kanban
+msgid "Total Number of Meters:"
+msgstr "Numero totale di meter:"
+
+#. module: smartgrid
+#: field:sg.url,link:0
+msgid "Url Link"
+msgstr "Link Url"
+
+#. module: smartgrid
+#: model:ir.model,name:smartgrid.model_res_users
+msgid "Users"
+msgstr "Utenti"
+
+#. module: smartgrid
+#: selection:sg.smartmeter,type:0
+msgid "Withdrawal"
+msgstr "Prelievo"
+
+#. module: smartgrid
+#: view:sg.customer.kwh.wizard:smartgrid.view_customer_kwh_contract
+msgid "Withdrawal Power"
+msgstr "Potenza Prelevata"
+
+#. module: smartgrid
+#: code:addons/smartgrid/model/ir_attachment.py:174
+#, python-format
+msgid "WriteError"
+msgstr "Errore scrittura"
+
+#. module: smartgrid
+#: code:addons/smartgrid/wizard/smartgrid_customer_kwh_wizard.py:157
+#: code:addons/smartgrid/wizard/smartgrid_customer_kwh_wizard.py:162
+#: code:addons/smartgrid/wizard/smartgrid_customer_kwh_wizard.py:177
+#: code:addons/smartgrid/wizard/smartgrid_customer_kwh_wizard.py:182
+#, python-format
+msgid "Wrong response from smartmeter!"
+msgstr "Risposta errata da smartmeter!"
+
+#. module: smartgrid
+#: field:sg.zone,yellow_zone_start:0
+msgid "Yellow Zone Start (KW)"
+msgstr "Inizio zona gialla (KW)"
+
+#. module: smartgrid
+#: field:sg.zone,yellow_zone_stop:0
+msgid "Yellow Zone Stop (KW)"
+msgstr "Fine zona gialla (KW)"
+
+#. module: smartgrid
+#: field:sg.zone,name:0
+msgid "Zone ID"
+msgstr "ID della Zona"
+
+#. module: smartgrid
+#: sql_constraint:sg.zone:0
+msgid "Zone ID must be unique!"
+msgstr "ID della Zona già presente!"
+
+#. module: smartgrid
+#: view:sg.zone.power:smartgrid.view_sg_zone_power_kanban
+msgid "Zone ID:"
+msgstr "Zone ID:"
+
+#. module: smartgrid
+#: field:ep.contract,zone_ids:0
+#: model:ir.actions.act_window,name:smartgrid.action_smartgrid_zone
+#: model:ir.ui.menu,name:smartgrid.menu_smart_grid_manager_zone
+#: field:res.groups,zones_id:0
+msgid "Zones"
+msgstr "Zone"
+
+#. module: smartgrid
+#: view:sg.url:smartgrid.view_sg_url_form
+msgid "e.g. http://www.energy-people.it/"
+msgstr "e.g. http://www.energy-people.it/"
+
+#. module: smartgrid
+#: view:ir.attachment:smartgrid.view_attachment_smartgrid_form
+msgid "on"
+msgstr "on"

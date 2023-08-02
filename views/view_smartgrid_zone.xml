@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <!-- Smartgrid Zone -->
+
+        <!-- List View -->
+        <record id="view_sg_zone_tree" model="ir.ui.view">
+            <field name="name">smartgrid.zone.tree</field>
+            <field name="model">sg.zone</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <!-- Form View -->
+        <record id="view_sg_zone_form" model="ir.ui.view">
+            <field name="name">smartgrid.zone.form</field>
+            <field name="model">sg.zone</field>
+            <field name="arch" type="xml">
+                <form string="Smartgrid Zone" version="7.0">
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <newline/>
+                            <field name="description" />
+                            <newline/>
+                            <!-- <field name="contract_number" /> -->
+                            <!-- <newline/> -->
+                            <field name="smartmeter_ids" />
+                        </group>
+                        <separator string="Permissions" />
+                        <group>
+                            <field name="smart_grid_group" />
+                            <field name="user_ids" />
+                        </group>
+                        <separator string="Active Power Values"/>
+                        <group>
+                            <field name="yellow_zone_start" />
+                            <field name="yellow_zone_stop" />
+                        </group>
+                        <separator string="Config Values for Customer Energy Graph" />
+                        <group>
+                            <field name="target_value" />
+                            <newline/>
+                            <field name="threshold_min" />
+                            <field name="threshold_max" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_sg_zone_filter" model="ir.ui.view">
+            <field name="name">smartgrid.zone.filter</field>
+            <field name="model">sg.zone</field>
+            <field name="arch" type="xml">
+                <search string="Search Zone">
+                    <field name="name" />
+                    <field name="description"   />
+                    <field name="smart_grid_group" />
+                    <field name="user_ids" />
+                </search>
+            </field>
+        </record>
+
+
+        <!-- Action list zones -->
+        <record id="action_smartgrid_zone" model="ir.actions.act_window">
+            <field name="name">Zones</field>
+            <field name="res_model">sg.zone</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_sg_zone_filter"/>
+            <field name="help">The Smartgrid Zones</field>
+        </record>
+    </data>
+</openerp>

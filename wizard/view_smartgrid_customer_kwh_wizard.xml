@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+        <record id="view_customer_kwh_contract_line_tree" model="ir.ui.view">
+            <field name="name">Customer kWh Line by Smartmeter</field>
+            <field name="model">sg.customer.kwh.line.wizard</field>
+            <field name="arch" type="xml">
+              <tree string="Customer kWh by Smartmeter">
+              	  <field name="day"/>
+                  <field name="sequence" invisible="1"/>
+                    <field name="measure_time"/>
+                    <field name="kwh"/>
+              </tree>
+            </field>
+        </record>    
+
+        <record id="view_customer_kwh_contract_line_graph" model="ir.ui.view">
+            <field name="name">Customer kWh Line by Smartmeter</field>
+            <field name="model">sg.customer.kwh.line.wizard</field>
+            <field name="arch" type="xml">
+              <graph string="Customer kWh by Smartmeter" type="bar">
+                    <field name="measure_time" type="row"/>
+                    <field name="kwh" type="measure"/>
+                  <field name="day" group="True"/>
+            </graph>
+            </field>
+        </record>
+
+        <!--record id="view_customer_current_consumption_line_tree" model="ir.ui.view">
+            <field name="name">Customer Current Consumption by Smartmeter</field>
+            <field name="model">sg.customer.current.consumption.line.wizard</field>
+            <field name="arch" type="xml">
+              <tree string="Customer Current Consumption by Smartmeter">
+                  <field name="name" />
+                  <field name="dtime" />
+                  <field name="active_power" />
+                  <field name="reactive_power" />
+              </tree>
+            </field>
+        </record>
+
+        <record id="view_customer_current_production_line_tree" model="ir.ui.view">
+            <field name="name">Customer Current Production by Smartmeter</field>
+            <field name="model">sg.customer.current.production.line.wizard</field>
+            <field name="arch" type="xml">
+              <tree string="Customer Current Production by Smartmeter">
+                  <field name="name" />
+                  <field name="dtime" />
+                  <field name="produced_power" />
+                  <field name="produced_power_2" />
+              </tree>
+            </field>
+        </record--> 
+
+        <record id="view_customer_kwh_contract" model="ir.ui.view">
+            <field name="name">Customer kWh by Smartmeter</field>
+            <field name="model">sg.customer.kwh.wizard</field>
+            <field name="arch" type="xml">
+              <form string="Customer kWh by Smartmeter" version="7.0">
+                  <label string="Select contract code and then press get data button"/>
+
+                  <group colspan="2">
+                  <!-- # TODO: Inserire vincolo su zona selezionata-->
+                        <field name="partner_id" required="1" domain="[('has_smartmeter','=',True), ('customer','=',True)]"/>
+
+                        <field name="name" attrs="{'readonly': ['|',('partner_id','=',False),('data_acquired','=',True)]}" domain="[('partner_id','=',partner_id)]" widget="selection"/>
+                        <field name="profile"/>
+                  </group>
+
+                    <field name="data_acquired" invisible="1"/>
+                    <button name="data_get" string="Get Smartgrid Data" type="object" class="oe_highlight"
+                            attrs="{'invisible': [('data_acquired','=',True)]}"/>
+                  <!--group string="Current Consuption/Production" attrs="{'invisible': [('data_acquired','=',False)]}" col="4">
+                  	<field name="consumption_lines" />
+                  	<field name="production_lines" />
+                  </group-->
+                    <group string="Customer Power Values (kW)" attrs="{'invisible': [('data_acquired','=',False)]}"
+                           col="4">
+                        <field name="request_time"/>
+                  	  <newline/>
+	                  <group string="Withdrawal Power" col="2" attrs="{'invisible': [('profile','=','p')]}">
+                            <field name="withdrawal_id"/>
+                            <field name="pa"/>
+                            <field name="pr"/>
+	                  </group>
+	                  <group string="Production Power" col="2" attrs="{'invisible': [('profile','=','w')]}">
+                            <field name="production_id"/>
+                            <field name="pp"/>
+	                  	<field name="pau" attrs="{'invisible': [('profile','=','p')]}"/>
+	                  </group>
+                  </group>
+                  <group string="kWh data lines" attrs="{'invisible': [('data_acquired','=',False)]}" col="4">
+                  <group col="1">
+                            <button name="get_graph" string="Graph" type="object" icon="terp-graph"
+                                    class="oe_highlight"/>
+                  </group>
+                  <newline/>
+                  <group>
+                            <field name="kwh_lines" nolabel="1"/>
+                  </group>
+                  </group>
+                             
+                  <!-- footer>
+                      <button string="Cancel" class="oe_link" special="cancel" />
+                  </footer-->
+            </form>
+            </field>
+        </record>
+
+        <record id="action_customer_kwh_contract" model="ir.actions.act_window">
+            <field name="name">Ultime 24h consumo contratto</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sg.customer.kwh.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_customer_kwh_contract"/>
+        </record>   
+
+
+
+    </data>
+</openerp>

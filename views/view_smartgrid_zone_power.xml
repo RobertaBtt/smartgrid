@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <!-- Smartgrid Power Model -->
+
+        <!-- Kanban Gauge View -->
+        <record model="ir.ui.view" id="view_sg_zone_power_kanban">
+            <field name="name">smartgrid.zone.power.kanban</field>
+            <field name="model">sg.zone.power</field>
+            <field name="arch" type="xml">
+                <kanban  class="oe_background_grey" create="0">
+                    <field name='color'/>
+                    <field name='name'/>
+                    <field name='zone_id'/>
+                    <field name='meter_number'/>
+                    <field name='online_meter_number'/>
+                    <field name='offline_meter_number'/>
+                    <field name='active_power_in'/>
+                    <field name='active_power_out'/>
+                    <field name='max_active_power_in'/>
+                    <field name='max_active_power_out'/>
+                    <field name='active_alarm_number'/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_color_#{kanban_getcolor(record.color.raw_value)} oe_kanban_card oe_kanban_global_click">
+                                <div class="oe_kanban_content">
+                                    <div>
+                                        <h2>Zone ID: <field name="zone_id" /></h2>
+                                        <h3>Total Number of Meters: <field name="meter_number" /></h3>
+                                        <h3>Total of Online Meters: <field name="online_meter_number" /></h3>
+                                        <h3>Total of Offline Meters: <field name="offline_meter_number" /></h3>
+                                        <h3>Total of Active Alarms: <field name="active_alarm_number" /></h3>
+                                        <!--<h3>Total Number of Contracts: <field name="contract_number" /></h3>-->
+                                        <h4 style="display: inline;">Total Net Value at</h4>
+                                        <h3><field name="name"/></h3>
+                                    </div>
+                                    <div>
+                                        <div style="display: inline-block">
+                                            <field name="active_power_in" widget="gauge" style="width:120px; height: 90px;"
+                                                   options="{'label': 'kW', 'levelcolors': ['#ff0000', '#f9c802', '#a9d70b'],'max_field': 'max_active_power_in',}"/>
+                                            <field name="active_power_out" widget="gauge" style="width:120px; height: 90px;"
+                                                   options="{'label': 'kW', 'levelcolors': ['#ff0000', '#f9c802', '#a9d70b'],'max_field': 'max_active_power_out',}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div><button name="new_message" string="New Message" icon="terp-mail-message-new" type="object" groups="smartgrid.group_manager_smartgrid"/></div>
+                                <div class="oe_clear"></div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- List View -->
+        <record id="view_sg_zone_power_tree" model="ir.ui.view">
+            <field name="name">smartgrid.zone.power.tree</field>
+            <field name="model">sg.zone.power</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="zone_id"/>
+                    <field name="meter_number"/>
+                    <field name='online_meter_number'/>
+                    <field name='offline_meter_number'/>
+                    <field name="active_power_in"/>
+                    <field name="active_power_out"/>
+                    <field name='active_alarm_number'/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_sg_zone_power_form" model="ir.ui.view">
+            <field name="name">smartgrid.zone.power.form</field>
+            <field name="model">sg.zone.power</field>
+            <field name="arch" type="xml">
+                <form string="Smartgrid Power" version="7.0">
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="zone_id"/>
+                            <field name="meter_number"/>
+                            <field name='online_meter_number'/>
+                            <field name='offline_meter_number'/>
+                            <field name="active_power_in"/>
+                            <field name="active_power_out"/>
+                            <!--<field name='active_alarm_number'/>-->
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_sg_zone_power_filter" model="ir.ui.view">
+            <field name="name">smartgrid.zone.power.filter</field>
+            <field name="model">sg.zone.power</field>
+            <field name="arch" type="xml">
+                <search string="Search Smartgrid Power">
+                    <field name="name" />
+                    <field name="zone_id"/>
+                    <field name="meter_number"/>
+                    <field name='online_meter_number'/>
+                    <field name='offline_meter_number'/>
+                    <field name="active_power_in"/>
+                    <field name="active_power_out"/>
+                    <!--<field name='active_alarm_number'/>-->
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_smartgrid_zone_power" model="ir.actions.act_window">
+            <field name="name">Smartgrid Zone Power</field>
+            <field name="res_model">sg.zone.power</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="search_view_id" ref="view_sg_zone_power_filter"/>
+            <field name="domain">[('zone_id.user_ids','in',uid)]</field>
+            <field name="help">The Smartgrid Power</field>
+        </record>
+
+
+    </data>
+</openerp>
+
